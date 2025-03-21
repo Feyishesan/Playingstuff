@@ -6,6 +6,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import org.jboss.resteasy.annotations.jaxrs.PathParam;
+
 @Path("/hello")
 public class GreetingResource {
 
@@ -15,7 +17,7 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/greeting/{name}")
-    public String greeting(String name) {
+    public String greeting(@PathParam String name) {
         return "<h1>" + service.greeting(name) + "</h1>";
     }
 
