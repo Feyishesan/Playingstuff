@@ -16,11 +16,11 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_HTML)
     @Path("/greeting/{name}")
     public String greeting(String name) {
-        return <h1>service.greeting(name) + </h1>;
+        return "<h1>" + service.greeting(name) + "</h1>";
     }
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_HTML)
     public String hello() {
         return "<h1>hello</h1>";
     }
