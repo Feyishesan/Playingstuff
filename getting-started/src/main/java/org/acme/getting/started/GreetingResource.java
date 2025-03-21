@@ -13,15 +13,15 @@ public class GreetingResource {
     GreetingService service;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_HTML)
     @Path("/greeting/{name}")
     public String greeting(String name) {
-        return service.greeting(name);
+        return <h1>service.greeting(name) + </h1>;
     }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "hello";
+        return "<h1>hello</h1>";
     }
 }
